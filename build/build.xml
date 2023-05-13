@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<project name="AddressApp" default="do-deploy" basedir="."  xmlns:fx="javafx:com.sun.javafx.tools.ant">
+	<project name="AddressAppv2" default="do-deploy" basedir="."  xmlns:fx="javafx:com.sun.javafx.tools.ant">
 	<target name="init-fx-tasks">
 		<path id="fxant">
 			<filelist>
@@ -20,75 +20,70 @@
 		<mkdir dir="externalLibs" />
 	
 		<copy todir="externalLibs">
-			<fileset dir="B:\NisarHDD\eclipse-workspace\Libraries">
-				<filename name="sqlite-jdbc-3.41.0.0.jar"/>
-			</fileset>
-		</copy>
-		<copy todir="externalLibs">
-			<fileset dir="B:\NisarHDD\javafx-sdk-19.0.2.1\lib">
-				<filename name="javafx-swt.jar"/>
-			</fileset>
-		</copy>
-		<copy todir="externalLibs">
-			<fileset dir="B:\NisarHDD\javafx-sdk-19.0.2.1\lib">
-				<filename name="javafx.base.jar"/>
-			</fileset>
-		</copy>
-		<copy todir="externalLibs">
-			<fileset dir="B:\NisarHDD\eclipse-workspace\Libraries">
-				<filename name="jaxb-runtime-2.3.1.jar"/>
-			</fileset>
-		</copy>
-		<copy todir="externalLibs">
-			<fileset dir="B:\NisarHDD\javafx-sdk-19.0.2.1\lib">
-				<filename name="javafx.media.jar"/>
-			</fileset>
-		</copy>
-		<copy todir="externalLibs">
-			<fileset dir="B:\NisarHDD\eclipse-workspace\Libraries">
-				<filename name="jaxb-core-2.3.0.1.jar"/>
-			</fileset>
-		</copy>
-		<copy todir="externalLibs">
-			<fileset dir="B:\NisarHDD\eclipse-workspace\Libraries">
-				<filename name="jaxb-api-2.3.1.jar"/>
-			</fileset>
-		</copy>
-		<copy todir="externalLibs">
-			<fileset dir="B:\NisarHDD\javafx-sdk-19.0.2.1\lib">
+			<fileset dir="C:\Users\Nisar Ahmed Abbasi\git\AddressAppv2\libs">
 				<filename name="javafx.swing.jar"/>
 			</fileset>
 		</copy>
 		<copy todir="externalLibs">
-			<fileset dir="B:\NisarHDD\javafx-sdk-19.0.2.1\lib">
+			<fileset dir="C:\Users\Nisar Ahmed Abbasi\git\AddressAppv2\libs">
+				<filename name="javafx.base.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Nisar Ahmed Abbasi\git\AddressAppv2\libs">
 				<filename name="javafx.web.jar"/>
 			</fileset>
 		</copy>
 		<copy todir="externalLibs">
-			<fileset dir="B:\NisarHDD\javafx-sdk-19.0.2.1\lib">
-				<filename name="javafx.fxml.jar"/>
+			<fileset dir="C:\Users\Nisar Ahmed Abbasi\git\AddressAppv2\libs">
+				<filename name="jaxb-api-2.3.1.jar"/>
 			</fileset>
 		</copy>
 		<copy todir="externalLibs">
-			<fileset dir="B:\NisarHDD\javafx-sdk-19.0.2.1\lib">
+			<fileset dir="C:\Users\Nisar Ahmed Abbasi\git\AddressAppv2\libs">
+				<filename name="javafx.media.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Nisar Ahmed Abbasi\git\AddressAppv2\libs">
+				<filename name="jaxb-runtime-2.3.1.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Nisar Ahmed Abbasi\git\AddressAppv2\libs">
 				<filename name="javafx.graphics.jar"/>
 			</fileset>
 		</copy>
 		<copy todir="externalLibs">
-			<fileset dir="B:\NisarHDD\javafx-sdk-19.0.2.1\lib">
+			<fileset dir="C:\Users\Nisar Ahmed Abbasi\git\AddressAppv2\libs">
 				<filename name="javafx.controls.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Nisar Ahmed Abbasi\git\AddressAppv2\libs">
+				<filename name="javafx-swt.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Nisar Ahmed Abbasi\git\AddressAppv2\libs">
+				<filename name="jaxb-core-2.3.0.1.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="C:\Users\Nisar Ahmed Abbasi\git\AddressAppv2\libs">
+				<filename name="javafx.fxml.jar"/>
 			</fileset>
 		</copy>
 	
 		<mkdir dir="project" />
 		<copy todir="project">
-			<fileset dir="B:\NisarHDD\eclipse-workspace\AddressApp">
+			<fileset dir="C:\Users\Nisar Ahmed Abbasi\git\AddressAppv2">
 				<include name="src/**" />
 			</fileset>
 		</copy>
 		<copy todir="project">
-			<fileset dir="B:\NisarHDD\eclipse-workspace\AddressApp">
-				<include name="resources/**" />
+			<fileset dir="C:\Users\Nisar Ahmed Abbasi\git\AddressAppv2">
+				<include name="libs/**" />
 			</fileset>
 		</copy>
 	
@@ -103,18 +98,17 @@
 		<!-- Copy project-libs references -->
 		<copy todir="build/libs">
 			<fileset dir="externalLibs">
-				<include name="sqlite-jdbc-3.41.0.0.jar"/>
 				<include name="javafx-swt.jar"/>
 				<include name="javafx.fxml.jar"/>
-				<include name="jaxb-runtime-2.3.1.jar"/>
 				<include name="jaxb-api-2.3.1.jar"/>
+				<include name="jaxb-runtime-2.3.1.jar"/>
 				<include name="javafx.swing.jar"/>
 				<include name="javafx.graphics.jar"/>
 				<include name="jaxb-core-2.3.0.1.jar"/>
 				<include name="javafx.base.jar"/>
 				<include name="javafx.web.jar"/>
-				<include name="javafx.controls.jar"/>
 				<include name="javafx.media.jar"/>
+				<include name="javafx.controls.jar"/>
 			</fileset>
 		</copy>
 	
@@ -127,12 +121,12 @@
 			</fileset>
 		</copy>
 		<copy todir="build/src">
-			<fileset dir="project/resources">
+			<fileset dir="project/libs">
 				<include name="**/*"/>
 			</fileset>
 		</copy>
 	
-		<javac includeantruntime="false" source="1.8" target="1.8" srcdir="build/src" destdir="build/classes" encoding="UTF-8">
+		<javac includeantruntime="false" source="17" target="17" srcdir="build/src" destdir="build/classes" encoding="UTF-8">
 			<classpath>
 				<fileset dir="build/libs">
 					<include name="*"/>
@@ -145,7 +139,7 @@
 		<fileset dir="project/src">
 			<exclude name="**/*.java"/>
 		</fileset>
-		<fileset dir="project/resources">
+		<fileset dir="project/libs">
 			<exclude name="**/*.java"/>
 		</fileset>
 		</copy>
@@ -167,8 +161,9 @@
 	
 	
 		<fx:resources id="appRes">
-			<fx:fileset dir="dist" includes="AddressApp.jar"/>
+			<fx:fileset dir="dist" includes="AddressAppv2.jar"/>
 			<fx:fileset dir="dist" includes="libs/*"/>
+			<fx:fileset dir="dist" includes="resoirces/*"/>
 		</fx:resources>
 	
 		<fx:application id="fxApplication"
@@ -180,7 +175,7 @@
 	
 	
 	
-		<fx:jar destfile="dist/AddressApp.jar">
+		<fx:jar destfile="dist/AddressAppv2.jar">
 			<fx:application refid="fxApplication"/>
 			<fileset dir="build/classes">
 			</fileset>
